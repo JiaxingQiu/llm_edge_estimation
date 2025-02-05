@@ -37,8 +37,6 @@ df <- merge(df, df_post[,c("sm_id", "raw_text", "sr_name")], by="sm_id", all.x=T
 
 
 write.csv(df, "./data/post1080.csv", row.names = F)
-write.csv(fea_df, "./data/fea.csv", row.names = F)
-
 
 # take a look at some false positives by llama
 table(df[,c("human_bodyhate01","llama_bodyhate01")])
